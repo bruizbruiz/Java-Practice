@@ -32,10 +32,22 @@ public class JavaVectorTest {
 		}
 		System.out.println();
 		
-		System.out.println("Value of index 12 is: " + array1.get(12));
+		System.out.println("Value of index 0 is: " + array1.get(0));
 		
-		array1.set(12, 900);
+		JavaVector<String> array2 = new JavaVector<String>();
+		array2.push("hi");
+		array2.push("hello");
+		array2.push("seven");
+		array2.insert(1, "no");
+		array2.prepend("yes");
 		
-		System.out.println("Value of index 12 is: " + array1.get(12));
+		System.out.println("Value of index 3 is: " + array2.get(3));
+		System.out.println("Size of array2 is: " + array2.size());		
+		System.out.println("Capacity: " + array2.capacity());
+		
+		for(String arr : array2) {
+			System.out.print(arr + ", ");
+		}
+
 	}
 }
